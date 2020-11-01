@@ -1,8 +1,6 @@
 package tn.esprit.spring;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import tn.esprit.spring.entities.Departement;
-import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.services.IDepartementService;
@@ -21,7 +18,7 @@ import tn.esprit.spring.services.IEntrepriseService;
 
 @SpringBootTest
 
-public class EntrepriseServiceImplTest {
+ class EntrepriseServiceImplTest {
 
 	@Autowired
 	IEntrepriseService es;
@@ -31,7 +28,7 @@ public class EntrepriseServiceImplTest {
 	IDepartementService id;
 	
 	@Test
-	public void ajouterEntrepriseTest() {
+	 void ajouterEntrepriseTest() {
 	Entreprise ent = new Entreprise("eeprise1", "raient1");
 	ent.setId(2);
 	//es.ajouterEntreprise(ent);
@@ -39,7 +36,7 @@ public class EntrepriseServiceImplTest {
 		
 	}
 	@Test
-	public void ajouterDepartementTest() {
+	 void ajouterDepartementTest() {
 		Departement dep = new Departement("Dep1");
 		dep.setId(1);
 	//	es.ajouterDepartement(dep);
@@ -49,7 +46,7 @@ public class EntrepriseServiceImplTest {
 	
 	
 	@Test
-	public void affecterDepartementAEntrepriseTest() {
+	 void affecterDepartementAEntrepriseTest() {
 		
 		Departement dep = new Departement();
 		es.affecterDepartementAEntreprise(6,6);
@@ -64,7 +61,7 @@ public class EntrepriseServiceImplTest {
 	}	
 	
 	@Test
-	public void getAllDepartementsNamesByEntrepriseTest() {
+	 void getAllDepartementsNamesByEntrepriseTest() {
 		List <String> ls = new ArrayList<>();
 		ls.add("Dep4");
 		ls.add("Dep5");
@@ -77,7 +74,7 @@ public class EntrepriseServiceImplTest {
 
 	
 	@Test
-	public void getEntrepriseByIdTest() {
+	 void getEntrepriseByIdTest() {
 		Entreprise tesent = new Entreprise();
 		tesent = es.getEntrepriseById(7);
 		assertEquals(7, tesent.getId());
