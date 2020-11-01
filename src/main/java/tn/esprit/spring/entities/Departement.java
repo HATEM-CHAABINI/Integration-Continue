@@ -83,6 +83,12 @@ public class Departement implements Serializable {
 	public void setEntreprise(Entreprise entreprise) {
 		this.entreprise = entreprise;
 	}
+
+	@Override
+	public String toString() {
+		return "Departement [id=" + id + ", name=" + name
+				+ ", entreprise=" + entreprise.getId() + "]";
+	}
 	
 	
 
