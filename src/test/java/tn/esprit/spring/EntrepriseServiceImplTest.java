@@ -65,7 +65,6 @@ import tn.esprit.spring.services.IEntrepriseService;
 		List <String> ls = new ArrayList<>();
 		ls.add("Dep4");
 		ls.add("Dep5");
-		ls.add("Dep6");
 		List <String> lss = new ArrayList<>();
 		lss= es.getAllDepartementsNamesByEntreprise(5);
 
